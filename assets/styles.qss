@@ -1,0 +1,425 @@
+/* ============================================================================
+ * Story Craft Canvas — Obsidian Dark theme
+ * Палитра:
+ *   #1e1e1e основной фон, #141414 холст, #252526 панели/ноды,
+ *   #3c3c3c границы, #dcddde текст, #7d5fff акцент,
+ *   #a0a0a0 линии последовательности
+ * ========================================================================== */
+
+QWidget {
+    background-color: #1e1e1e;
+    color: #dcddde;
+    font-family: 'Segoe UI', 'Inter', 'Noto Sans', sans-serif;
+    font-size: 13px;
+}
+
+QMainWindow,
+QDialog {
+    background-color: #1e1e1e;
+}
+
+QWidget#CanvasHost {
+    background-color: #141414;
+}
+
+QWidget#PanelBox {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------- Меню ---- */
+QMenuBar {
+    background-color: #252526;
+    color: #dcddde;
+    border-bottom: 1px solid #3c3c3c;
+    padding: 2px 4px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #3b3d42;
+    color: #ffffff;
+}
+
+QMenu {
+    background-color: #252526;
+    color: #dcddde;
+    border: 1px solid #3c3c3c;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 26px 6px 26px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #7d5fff;
+    color: #ffffff;
+}
+
+QMenu::item:disabled {
+    color: #6a6a6a;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #3c3c3c;
+    margin: 4px 8px;
+}
+
+/* ------------------------------------------------------------- Тулбар ---- */
+QToolBar {
+    background-color: #252526;
+    border: none;
+    border-bottom: 1px solid #3c3c3c;
+    padding: 4px 6px;
+    spacing: 6px;
+}
+
+QToolBar::separator {
+    background-color: #3c3c3c;
+    width: 1px;
+    margin: 4px 6px;
+}
+
+QLabel#AppTitleLabel {
+    color: #7d5fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+QLabel#HintLabel {
+    color: #808080;
+    font-size: 12px;
+    padding-left: 12px;
+}
+
+/* ------------------------------------------------------------- Кнопки ---- */
+QPushButton {
+    background-color: #2b2d30;
+    color: #dcddde;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    padding: 6px 14px;
+    min-height: 16px;
+}
+
+QPushButton:hover {
+    background-color: #34363a;
+    border-color: #7d5fff;
+}
+
+QPushButton:pressed {
+    background-color: #1f2022;
+}
+
+QPushButton:checked {
+    background-color: #4a3f8f;
+    border-color: #7d5fff;
+    color: #ffffff;
+}
+
+QPushButton:disabled {
+    color: #5c5c5c;
+    border-color: #2f2f2f;
+}
+
+QPushButton#primaryButton {
+    background-color: #7d5fff;
+    border: 1px solid #7d5fff;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #8f75ff;
+}
+
+QPushButton#dangerButton {
+    background-color: #3a2326;
+    border: 1px solid #d63031;
+    color: #ff8a8a;
+}
+
+QPushButton#dangerButton:hover {
+    background-color: #d63031;
+    color: #ffffff;
+}
+
+QToolButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #dcddde;
+}
+
+QToolButton:hover {
+    background-color: #34363a;
+    border-color: #3c3c3c;
+}
+
+/* ---------------------------------------------------- Поля ввода форм ---- */
+QLineEdit,
+QTextEdit,
+QPlainTextEdit,
+QSpinBox,
+QComboBox {
+    background-color: #1b1b1c;
+    color: #dcddde;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    padding: 5px 7px;
+    selection-background-color: #7d5fff;
+    selection-color: #ffffff;
+}
+
+QLineEdit:focus,
+QTextEdit:focus,
+QPlainTextEdit:focus,
+QSpinBox:focus,
+QComboBox:focus {
+    border: 1px solid #7d5fff;
+}
+
+QLineEdit:read-only,
+QTextEdit:read-only {
+    background-color: #202021;
+    color: #b8b9bb;
+}
+
+QLineEdit[invalid="true"] {
+    border: 1px solid #d63031;
+    background-color: #2a1b1d;
+}
+
+QLineEdit:disabled,
+QTextEdit:disabled {
+    color: #6a6a6a;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    selection-background-color: #7d5fff;
+    color: #dcddde;
+    outline: none;
+}
+
+/* ------------------------------------------------------------- Списки ---- */
+QListWidget,
+QListView,
+QTreeView {
+    background-color: #1b1b1c;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    padding: 4px;
+    outline: none;
+}
+
+QListWidget::item,
+QListView::item {
+    padding: 6px 8px;
+    border-radius: 4px;
+    color: #dcddde;
+}
+
+QListWidget::item:hover,
+QListView::item:hover {
+    background-color: #2f3134;
+}
+
+QListWidget::item:selected,
+QListView::item:selected {
+    background-color: #4a3f8f;
+    color: #ffffff;
+}
+
+/* ---------------------------------------------------------------- Табы ---- */
+QTabWidget::pane {
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    top: -1px;
+}
+
+QTabBar::tab {
+    background: #252526;
+    color: #a0a0a0;
+    border: 1px solid #3c3c3c;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 7px 16px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:hover {
+    color: #dcddde;
+    background: #2f3134;
+}
+
+QTabBar::tab:selected {
+    background: #1e1e1e;
+    color: #7d5fff;
+    border-top: 2px solid #7d5fff;
+}
+
+/* ------------------------------------------------------------ Скроллы ---- */
+QScrollArea {
+    background-color: transparent;
+    border: none;
+}
+
+QScrollBar:vertical {
+    background: #1e1e1e;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar:horizontal {
+    background: #1e1e1e;
+    height: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #3c3c3c;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #3c3c3c;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:hover {
+    background: #7d5fff;
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page {
+    background: transparent;
+}
+
+/* -------------------------------------------------------- CheckBox ------- */
+QCheckBox {
+    spacing: 8px;
+    color: #dcddde;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #5a5a5a;
+    background-color: #1b1b1c;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #7d5fff;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #7d5fff;
+    border-color: #7d5fff;
+}
+
+/* ------------------------------------------------------- Разделители ----- */
+QSplitter::handle {
+    background-color: #2a2a2b;
+}
+
+QSplitter::handle:hover {
+    background-color: #7d5fff;
+}
+
+QGroupBox {
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    margin-top: 12px;
+    padding-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    padding: 0 4px;
+    color: #9f9fa3;
+}
+
+/* ------------------------------------------------------------- Статус ---- */
+QStatusBar {
+    background-color: #252526;
+    color: #a0a0a0;
+    border-top: 1px solid #3c3c3c;
+    min-height: 26px;
+}
+
+QStatusBar QLabel {
+    background: transparent;
+    color: #a0a0a0;
+    padding: 3px 10px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+/* ------------------------------------------------------------- Tooltip --- */
+QToolTip {
+    background-color: #252526;
+    color: #dcddde;
+    border: 1px solid #7d5fff;
+    padding: 4px 8px;
+}
+
+/* -------------------------------------------------------------- Прочее --- */
+QMessageBox {
+    background-color: #1e1e1e;
+}
+
+QSizeGrip {
+    background: transparent;
+}
+
+QGraphicsView {
+    border: none;
+    background-color: #141414;
+}
+
+/* ----------------------------------------------------------- Таймлайн ---- */
+QWidget#TimelinePanel {
+    background-color: #141414;
+}
+
+QWidget#TimelinePanel QScrollArea,
+QWidget#TimelinePanel QScrollArea > QWidget > QWidget {
+    background-color: #141414;
+}
+
+QWidget#TimelinePanel QLabel {
+    background: transparent;
+}
